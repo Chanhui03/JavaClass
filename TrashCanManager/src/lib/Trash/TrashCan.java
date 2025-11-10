@@ -77,7 +77,7 @@ public abstract class TrashCan {
         else {
             for (int i = 0; i < count; i++) {
                 Garbage g = garbages[i];
-                System.out.print(g.getName());
+                System.out.print(g);
                 if (i > 0) {
                     System.out.print(", ");
                 }

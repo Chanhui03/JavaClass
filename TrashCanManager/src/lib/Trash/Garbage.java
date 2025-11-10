@@ -28,7 +28,12 @@ public class Garbage {
     }
 
     public void displayDetails() {
-        System.out.println("[" + type + "] " + name + "(" + weight + " g)" );
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        return "[" + type + "] " + name + "(" + weight + " g)" ;
     }
 
     public void throwAway(TrashCan trashCan) {
