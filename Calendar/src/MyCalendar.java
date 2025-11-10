@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class MyCalendar {
-    // 각 월에 대한 열거형 정의
     // index 0 = JANUARY, 1 = FEBRUARY, ..., 11 = DECEMBER
     enum Month { JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER }
     
@@ -9,7 +8,7 @@ public class MyCalendar {
         // 1월부터 12월까지 반복
         for (Month month : Month.values()) {
             System.out.println(year + "년 " + (month.ordinal() + 1) + "월");
-            System.out.println("일\t월\t화\t수\t목\t금\t토");
+            System.out.println(" 일 월 화 수 목 금 토");
 
             Calendar cal = Calendar.getInstance();
             cal.clear();
@@ -22,12 +21,12 @@ public class MyCalendar {
 
             // 첫 주의 공백 출력
             for (int i = 1; i < firstDayOfWeek; i++) {
-                System.out.print("\t");
+                System.out.print("   ");
             }
 
             // 날짜 출력
             for (int day = 1; day <= daysInMonth; day++) {
-                System.out.print(day + "\t");
+                System.out.printf("%2d ", day);
                 // 토요일마다 줄 바꿈
                 if ((firstDayOfWeek + day - 1) % 7 == 0) {
                     System.out.println();
