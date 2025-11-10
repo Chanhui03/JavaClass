@@ -24,7 +24,7 @@ public class MyCalendar {
             for (int i = 1; i < firstDayOfWeek; i++) {
                 System.out.print("\t");
             }
-            
+
             // 날짜 출력
             for (int day = 1; day <= daysInMonth; day++) {
                 System.out.print(day + "\t");
@@ -39,7 +39,6 @@ public class MyCalendar {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-
             // 년도 입력받기
             System.out.print("년도 입력(-1이면 종료) >> ");
             int year = scanner.nextInt();
