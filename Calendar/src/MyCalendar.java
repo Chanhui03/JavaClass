@@ -17,7 +17,7 @@ public class MyCalendar {
             // 첫 날의 요일 계산
             int firstDayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
             // 해당 월의 총 일수 계산
-            int daysInMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+            int lastDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 
             // 첫 주의 공백 출력
             for (int i = 1; i < firstDayOfWeek; i++) {
@@ -25,7 +25,7 @@ public class MyCalendar {
             }
 
             // 날짜 출력
-            for (int day = 1; day <= daysInMonth; day++) {
+            for (int day = 1; day <= lastDay; day++) {
                 System.out.printf("%2d ", day);
                 // 토요일마다 줄 바꿈
                 if ((firstDayOfWeek + day - 1) % 7 == 0) {
